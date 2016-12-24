@@ -108,13 +108,13 @@ namespace AspNetInterop.UI.Core.Controllers
                 user.Claims.Add(new IdentityUserClaim<string>
                 {
                     ClaimType = "Customers",
-                    ClaimValue = "Write",
+                    ClaimValue = "Write,Access",
                 });
 
                 user.Claims.Add(new IdentityUserClaim<string>
                 {
                     ClaimType = "Products",
-                    ClaimValue = "Write"
+                    ClaimValue = "Write,Access"
                 });
 
                 var result = await _userManager.CreateAsync(user, model.Password);
