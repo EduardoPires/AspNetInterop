@@ -13,7 +13,7 @@ namespace AspNetInterop.UI.MVC5
         public void ConfigureAuth(IAppBuilder app)
         {
             var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            var keyRingPath = Path.GetFullPath(Path.Combine(baseDirectory, "..", "aspNetInterop.KeyRing"));
+            var keyRingPath = Path.GetFullPath(Path.Combine(baseDirectory, "..", "AspNetInterop.KeyRing"));
 
             var protectionProvider = DataProtectionProvider.Create(new DirectoryInfo(keyRingPath));
             var dataProtector = protectionProvider.CreateProtector(

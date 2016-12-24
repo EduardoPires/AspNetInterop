@@ -48,7 +48,7 @@ namespace AspNetInterop.UI.Core
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             var contentRoot = _hostingEnvironment.ContentRootPath;
-            var keyRingPath = Path.GetFullPath(Path.Combine(contentRoot, "..", "aspNetInterop.KeyRing"));
+            var keyRingPath = Path.GetFullPath(Path.Combine(contentRoot, "..", "AspNetInterop.KeyRing"));
 
             var protectionProvider = DataProtectionProvider.Create(new DirectoryInfo(keyRingPath));
             var dataProtector = protectionProvider.CreateProtector(
