@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="http://localhost:16921/Manage" title="Manage">Hello @User.Identity.GetUserName()</a>
+        </li>
+        <li>
+            <a href="http://localhost:16921/Account/LogOut" title="Manage">Log off</a>
+        </li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://localhost:16921/Account/Register" title="Register new user">Register</a></li>
+        <li><a href="http://localhost:16921/Account/Login" title="Login">Login</a></li>
+    </ul>
+}

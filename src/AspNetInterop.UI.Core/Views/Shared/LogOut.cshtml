@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Log Out";
+}
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+
+        <h1 class="text-info">Log Out.</h1>
+        <h2 class="text-info">Are you Sure?</h2>
+
+        <form asp-area="" asp-controller="Account" asp-action="LogOut" method="post" id="logoutForm">
+            <div class="form-actions no-color">
+                <div>
+                    <a href="javascript:history.back()" class="btn btn-success">No</a>
+                    <button type="submit" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

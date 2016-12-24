@@ -1,0 +1,68 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "View Cookies";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Sharing between ASP.NET Core and ASP.NET 4.5</title>
+</head>
+<body>
+<div id="content">
+    <h1>Cookie Sharing between ASP.NET Core and ASP.NET 4.5</h1>
+    <h2>This is .NET Core</h2>
+    <hr/>
+    @if (Context.Request.Cookies.Any())
+    {
+        <h3>Cookies</h3>
+        <table class="cookie">
+            <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var cookie in Context.Request.Cookies)
+            {
+                <tr>
+                    <td>@cookie.Key</td>
+                    <td>@cookie.Value</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>No cookies found.</h3>
+    }
+    <hr/>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h3>Current User Details</h3>
+        <table class="col-md-12">
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Issuer</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var c in User.Claims)
+            {
+                <tr>
+                    <td>@c.Type</td>
+                    <td>@c.Value</td>
+                    <td>@c.Issuer</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+</div>
+</body>
+</html>
