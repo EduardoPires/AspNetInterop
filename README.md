@@ -1,6 +1,6 @@
 Integrating ASP.NET Core and ASP.NET 4.X 
 =====================
-The goal of this project is sharing the same cookie with two applications using ASP.NET Core 1.1 and ASP.NET MVC 5
+The goal of this project is sharing the same cookie between two applications using ASP.NET Core 1.1 and ASP.NET MVC 5
 
 ##Nuget Packages
 - ASP.NET MVC 5
