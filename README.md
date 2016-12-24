@@ -14,7 +14,7 @@ This is a sample application using some beta/pre-release versions (including ASP
 - Beware to use in production way
 
 ##References
-This project is an improvement of the [blowdart/idunno.CookieSharing](https://github.com/blowdart/idunno.CookieSharing) repository.
+This project is an improvement of the [blowdart/idunno.CookieSharing](https://github.com/blowdart/idunno.CookieSharing) project.
 The improvements is:
 
 - Using ASP.NET Identity
